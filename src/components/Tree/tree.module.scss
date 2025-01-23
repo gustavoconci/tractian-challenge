@@ -1,0 +1,99 @@
+.tree {
+  border: 1px solid #d0d7de;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+
+  @media (min-width: 992px) {
+    width: 43%;
+  }
+
+  &_header {
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+  &_body {
+    flex-grow: 1;
+    font-size: 14px;
+    border-top: 1px solid #d0d7de;
+    padding: .6875rem;
+  }
+
+  &_item {
+    &.component {
+      cursor: pointer;
+
+      .tree_item_name {
+        &:hover {
+          background-color: #2188FF;
+          color: #fff;
+
+          .tree_item_icon {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &_name {
+      align-items: center;
+      display: flex;
+      gap: 4px;
+      margin-bottom: 7px;
+    }
+
+    &_icon {
+      color: #2188FF;
+    }
+
+    &_status {
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+
+      &.alert {
+        background-color: #ED3833;
+      }
+
+      &.operating {
+        background-color: #52C41A;
+      }
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    .tree_list {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.search {
+  border: none;
+  color: #363c44;
+  height: 44px;
+  line-height: 20px;
+  padding: 12px;
+  width: 100%;
+
+  &::placeholder {
+    color: #c1c9d2;
+  }
+}
+
+.submit {
+  height: 100%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

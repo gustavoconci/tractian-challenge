@@ -1,0 +1,50 @@
+.default {
+  align-items: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #363C44;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: .875rem;
+  font-weight: bold;
+  gap: .375rem;
+  justify-content: center;
+  line-height: 1.25rem;
+  padding: 0.75rem;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  z-index: 0;
+
+  @at-root a#{&} {
+    text-decoration: none;
+  }
+
+  .icon {
+    fill: currentColor;
+    vertical-align: bottom;
+  }
+
+  &.disabled,
+  &:disabled {
+    background: #ccc;
+    border-color: transparent;
+    color: #555;
+    pointer-events: none;
+  }
+}
+
+.outline {
+  border-color: #D8DFE6;
+  color: #77818C;
+
+  > svg {
+    color: #2188FF;
+  }
+
+  &.active {
+    background-color: #D8DFE6;
+  }
+}

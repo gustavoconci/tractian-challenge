@@ -1,0 +1,34 @@
+.viewer {
+  border: 1px solid #d0d7de;
+  flex-grow: 1;
+
+  &_header {
+    border-bottom: 1px solid #d0d7de;
+    padding: .875rem 1rem;
+  }
+
+  &_title {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  &_status {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+
+    &.alert {
+      background-color: #ED3833;
+    }
+
+    &.operating {
+      background-color: #52C41A;
+    }
+  }
+
+  &_body {
+    padding: 1.5rem;
+  }
+}
