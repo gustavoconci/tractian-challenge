@@ -10,7 +10,7 @@ export default function Tree() {
   const { company } = useContext(CompanyContext);
   const { assets } = useAssets(company?.id);
   const { locations } = useLocations(company?.id);
-  const { setAssetData, energySensorFilter, sensorStatusFilter } =
+  const { setAssetData, energySensorFilter, setEnergySensorFilter, sensorStatusFilter, setSensorStatusFilter } =
     useContext(AssetContext);
   const [tree, setTree] = useState<NodePropsBase[]>([]);
   const [search, setSearch] = useState("");
@@ -119,6 +119,8 @@ export default function Tree() {
     return () => {
       setTree([]);
       setSearch("");
+      setEnergySensorFilter(false);
+      setSensorStatusFilter(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assets, locations]);
